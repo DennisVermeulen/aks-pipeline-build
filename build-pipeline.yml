@@ -10,7 +10,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '6a8843fd-7313-48e2-9381-3f9ef59ce82d'
+  dockerRegistryServiceConnection: 'registrydv'
   imageRepository: 'app1/dvnginx'
   containerRegistry: 'registrydv.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
@@ -36,6 +36,7 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+<<<<<<< HEAD
           
     - upload: manifests
       artifact: manifests
@@ -70,4 +71,6 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
+=======
+>>>>>>> 4ba17f74fb713c7f45edda7d135e69abb756f9fe
 
