@@ -36,7 +36,6 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-<<<<<<< HEAD
           
     - upload: manifests
       artifact: manifests
@@ -71,6 +70,4 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
-=======
->>>>>>> 4ba17f74fb713c7f45edda7d135e69abb756f9fe
 
