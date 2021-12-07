@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app1-nginx
-          image:  registrydv.azurecr.io/app1/dvnginx
+          image: registrydv.azurecr.io/app1/dvnginx:latest
           ports:
             - containerPort: 80
 ---
